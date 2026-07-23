@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Movie Explorer</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <div class="logo">Movies<span>Explorer</span></div>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-link active" data-page="home">Browse All</a></li>
+                <li><a href="#" class="nav-link" data-page="movies">Movies</a></li>
+                <li><a href="#" class="nav-link" data-page="series">TV Series</a></li>
+                <li><a href="#" class="nav-link" data-page="favorites">Favourites</a></li>
+            </ul>
+            <form class="search-form" id="searchForm">
+                <input type="text" id="searchInput" placeholder="Search..." />
+                <button type="submit">Search</button>
+            </form>
+        </nav>
+
+        <div class="page-header">
+            <h1 id="pageTitle">Browse All - Trending This Week</h1>
+        </div>
+
+        <div class="filter-bar" id="filterBar-home">
+            <!-- <div class="category-toggle" id="categoryToggle">
+                <button data-type="all" class="active">All</button>
+                <button data-type="movies">Movies</button>
+                <button data-type="tv">TV Shows</button>
+            </div> -->
+            <p class="results-note" id="resultsNote">0 titles found</p>
+        </div>
+
+        <div class="filter-bar hidden" id="filterBar-movies">
+            <select id="genreFilter-movies">
+                <option value="">All Genres</option>
+            </select>
+            <select id="sortFilter-movies">
+                <option value="popularity.desc">Most Popular</option>
+                <option value="vote_average.desc">Top Rated</option>
+                <option value="release_date.desc">Newest First</option>
+                <option value="release_date.asc">Oldest First</option>
+            </select>
+        </div>
+
+        <div class="filter-bar hidden" id="filterBar-series">
+            <select id="genreFilter-series">
+                <option value="">All Genres</option>
+            </select>
+            <select id="sortFilter-series">
+                <option value="popularity.desc">Most Popular</option>
+                <option value="vote_average.desc">Top Rated</option>
+                <option value="first_air_date.desc">Newest First</option>
+                <option value="first_air_date.asc">Oldest First</option>
+            </select>
+        </div>
+
+        <div class="movie-grid" id="movieGrid">
+            <p class="status-message">Loading...</p>
+        </div>
+
+        <div class="details-view hidden" id="detailsView"></div>
+
+        <div class="pagination">
+            <button id="prevBtn">&#8592; Prev</button>
+            <span id="pageInfo">Page 1</span>
+            <button id="nextBtn">Next &#8594;</button>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
