@@ -20,3 +20,7 @@ A responsive movie browsing web application built with **HTML, CSS, and JavaScri
 - JavaScript (ES6)
 - TMDB API
 - Fetch API
+
+## 🌐 Live Demo
+
+Link: https://movie-explorer-app-hazel-psi.vercel.app
