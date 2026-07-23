@@ -1,4 +1,4 @@
-# 🎬 Movie Explorer
+# 🎬 Movies/Series Explorer
 
 A responsive movie browsing web application built with **HTML, CSS, and JavaScript** that allows users to discover movies and TV shows using the TMDB API.
 
