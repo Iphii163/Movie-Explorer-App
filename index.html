@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Movie Explorer</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <div class="logo">Movies<span>Explorer</span></div>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-link active" data-page="home">Browse All</a></li>
+                <li><a href="#" class="nav-link" data-page="movies">Movies</a></li>
+                <li><a href="#" class="nav-link" data-page="series">TV Series</a></li>
+                <li><a href="#" class="nav-link" data-page="favorites">Favourites</a></li>
+            </ul>
+            <form class="search-form" id="searchForm">
+                <input type="text" id="searchInput" placeholder="Search..." autocomplete="off" />
+                <button type="submit" id="searchBtn">Search</button>
+            </form>
+        </nav>
+
+        <section class="hero-banner" id="heroBanner">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <span class="hero-type" id="heroType">Trending</span>
+                    <h1 id="heroTitle">Loading...</h1>
+
+                    <div class="hero-meta">
+                        ⭐ <span id="heroRating">0</span>
+                        •
+                        <span id="heroDate"></span>
+                    </div>
+
+                    <p id="heroOverview">
+                        Loading movie description...
+                    </p>
+
+                    <button class="hero-btn" id="heroDetailsBtn">
+                        View Details
+                    </button>
+                </div>
+            </div>
+
+            <div class="hero-nav">
+                <button class="hero-nav-btn" id="heroPrevBtn">&#8592;</button>
+                <button class="hero-nav-btn" id="heroNextBtn">&#8594;</button>
+            </div>
+        </section>
+
+        <div class="page-header">
+            <h1 id="pageTitle">Browse All - Trending This Week</h1>
+        </div>
+
+        <div class="filter-bar" id="filterBar-home">
+            <p class="results-note" id="resultsNote">0 titles found</p>
+        </div>
+
+        <div class="filter-bar hidden" id="filterBar-movies">
+            <select id="genreFilter-movies">
+                <option value="">All Genres</option>
+            </select>
+            <select id="sortFilter-movies">
+                <option value="popularity.desc">Most Popular</option>
+                <option value="vote_average.desc">Top Rated</option>
+                <option value="release_date.desc">Newest First</option>
+                <option value="release_date.asc">Oldest First</option>
+            </select>
+        </div>
+
+        <div class="filter-bar hidden" id="filterBar-series">
+            <select id="genreFilter-series">
+                <option value="">All Genres</option>
+            </select>
+            <select id="sortFilter-series">
+                <option value="popularity.desc">Most Popular</option>
+                <option value="vote_average.desc">Top Rated</option>
+                <option value="first_air_date.desc">Newest First</option>
+                <option value="first_air_date.asc">Oldest First</option>
+            </select>
+        </div>
+
+        <div class="movie-grid" id="movieGrid">
+            <p class="status-message">Loading...</p>
+        </div>
+
+        <div class="details-view hidden" id="detailsView"></div>
+
+        <div class="pagination">
+            <button id="prevBtn">&#8592; Prev</button>
+            <span id="pageInfo">Page 1</span>
+            <button id="nextBtn">Next &#8594;</button>
+        </div>
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Movies<span>Explorer</span></h3>
+                    <p>
+                        Movie Explorer uses the TMDB API to provide movie and TV series
+                        information. This product uses the TMDB API but is not
+                        certified by TMDB.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li>
+                            <a href="https://www.themoviedb.org/about" target="_blank">
+                                About TMDB
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://developer.themoviedb.org/docs" target="_blank">
+                                API Documentation
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.themoviedb.org/terms-of-use" target="_blank">
+                                Terms of Use
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MoviesExplorer. All Rights Reserved.</p>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
